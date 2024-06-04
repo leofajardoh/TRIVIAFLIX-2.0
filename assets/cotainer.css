@@ -1,0 +1,15 @@
+.container{
+    width: 500px;
+    background: linear-gradient(#221f1f,#b20710);
+    height: 80%;
+    padding: 20px;
+    position: relative;
+}
+.container .img{
+    width: 140px;
+    position: absolute;
+    top: -60px;
+    right: -90px;
+    z-index: -1;
+
+}

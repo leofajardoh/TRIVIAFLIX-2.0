@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/estilo.css">
+    <title>Triviaflix</title>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/img/auris.png" alt="" class="img">
+        <header>
+            <div class="puntaje">
+                <img src="assets/img/puntos.png" alt="">
+                <span class="puntos" id="puntos">0</span>
+            </div>
+
+            <img src="assets/img/TriviaflixSinFondo.png" alt="" class="logo">
+
+            <div class="jugador">
+                <span class="nombre" id="nombre">Martín</span>
+                <img src="assets/img/user.png" alt="">
+            </div>
+        </header>
+
+        <!-- SECCIÓN MENU DEL JUEGO -->
+        <main class="menu">
+            <h2>Hola <span id="nombre-jugador">Martín</span></h2>
+            <p>Elige una categoría:</p>
+            <div class="categorias">
+                <div class="categoria" id="CienciaFiccion">
+                    <img src="assets/img/CienciaFiccion.png" alt="" class="foto-categoria">
+                    <h3>Ciencia Ficción</h3>
+                </div>
+                <div class="categoria" id="Fantasia">
+                    <img src="assets/img/Fantasia.png" alt="" class="foto-categoria">
+                    <h3>Fantasía</h3>
+                </div>
+                <div class="categoria" id="Drama">
+                    <img src="assets/img/Drama.png" alt="" class="foto-categoria">
+                    <h3>Drama</h3>
+                </div>
+                <div class="categoria" id="Terror">
+                    <img src="assets/img/Terror.png" alt="" class="foto-categoria">
+                    <h3>Terror</h3>
+                </div>
+                <div class="categoria" id="Accion">
+                    <img src="assets/img/Accion.png" alt="" class="foto-categoria">
+                    <h3>Acción</h3>
+                </div>
+                <div class="categoria" id="Comedia">
+                    <img src="assets/img/Comedia.png" alt="" class="foto-categoria">
+                    <h3>Comedia</h3>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="src/js/menu.js"></script>
+</body>
+</html>
