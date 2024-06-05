@@ -1,4 +1,3 @@
-//tomamos los elementos html
 const txtPuntaje = document.querySelector("#puntos");
 const nombre = document.querySelector("#nombre");
 
@@ -19,9 +18,16 @@ if (!localStorage.getItem("puntaje-total")) {
 // Cargar las preguntas del tema que eligió desde un archivo JSON
 const categoriaActual = localStorage.getItem("categoria-actual");
 
-fetch("../data/preguntas.json")
-    .then(response => response.json())
+// Ruta al archivo JSON, considera usando la ruta absoluta desde la raíz del proyecto
+fetch("/data/preguntas.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
+        console.log("Preguntas cargadas:", data); // Verifica los datos recibidos
         preguntasCategoria = data.filter(pregunta => pregunta.categoria === categoriaActual);
         cargarSiguientePregunta(numPreguntaActual);
     })
