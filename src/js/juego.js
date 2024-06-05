@@ -19,7 +19,7 @@ if (!localStorage.getItem("puntaje-total")) {
 // Cargar las preguntas del tema que eligió desde un archivo JSON
 const categoriaActual = localStorage.getItem("categoria-actual");
 
-fetch('../data/preguntas.json')
+fetch("../data/preguntas.json")
     .then(response => response.json())
     .then(data => {
         preguntasCategoria = data.filter(pregunta => pregunta.categoria === categoriaActual);
