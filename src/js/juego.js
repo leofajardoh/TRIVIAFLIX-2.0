@@ -18,7 +18,7 @@ if (!localStorage.getItem("puntaje-total")) {
 // Cargar las preguntas del tema que eligió desde un archivo JSON
 const categoriaActual = localStorage.getItem("categoria-actual");
 
-fetch("/data/preguntas.json")
+fetch("/resources/netflix_preguntas.json")
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
