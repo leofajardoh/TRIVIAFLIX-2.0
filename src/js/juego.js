@@ -18,7 +18,7 @@ if (!localStorage.getItem("puntaje-total")) {
 // Cargar las preguntas del tema que eligió desde un archivo JSON
 const categoriaActual = localStorage.getItem("categoria-actual");
 
-fetch("resources/netflix_preguntas.json")
+fetch("../../resources/netflix_preguntas.json") // Ruta actualizada para la carga que no nos permitía en github
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
