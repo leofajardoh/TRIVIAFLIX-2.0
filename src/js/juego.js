@@ -18,7 +18,7 @@ if (!localStorage.getItem("puntaje-total")) {
 // Cargar las preguntas del tema que eligió desde un archivo JSON
 const categoriaActual = localStorage.getItem("categoria-actual");
 
-fetch("../../resources/netflix_preguntas.json") // Ruta actualizada para la carga que no nos permitía en github
+fetch("./resources/netflix_preguntas.json") // nueva ruta para ver en el deploy
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -35,6 +35,7 @@ fetch("../../resources/netflix_preguntas.json") // Ruta actualizada para la carg
         }
     })
     .catch(error => console.error('Error al cargar las preguntas:', error));
+
 
 function cargarSiguientePregunta(num) {
     if (num >= preguntasCategoria.length) {
